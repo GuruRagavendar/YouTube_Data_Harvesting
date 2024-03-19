@@ -9,7 +9,7 @@ import numpy as np
 from googleapiclient.errors import HttpError
 from pprint import pprint
 
-api_key ='AIzaSyDe6JawYkkE2rsogZllDxLSYJ5mIBDRRAg'
+api_key ='************************'
 youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey=api_key)
 
 # This function is to Scrape the channel details with respect to channel id
@@ -168,7 +168,7 @@ elif selected == 'To Add Channel Details':
                 cmdf['published_date'] = pd.to_datetime(cmdf['published_date'], format='%Y-%m-%dT%H:%M:%SZ', utc=True)
 
                 # Creating an Engine to connect to MySql Database using SQlAlchemy
-                engine = create_engine('mysql+mysqlconnector://root:7295*MAthew@localhost/youtubeData')
+                engine = create_engine('mysql+mysqlconnector://root:*********@localhost/youtubeData')
 
                 # Convert DataFrame to MySQL table
                 cdf.to_sql("channel_details", engine, index=False, if_exists='replace')
