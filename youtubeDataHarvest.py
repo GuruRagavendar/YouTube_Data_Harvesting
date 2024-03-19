@@ -49,7 +49,7 @@ def channel_details(channel_id):
             if 'commentsDisabled' in error_detail:
                 print(f"Comments are disabled for video with ID: {id}")
             else:
-                raise
+                raise e
       channelData = {
         'Channel': 
         {
