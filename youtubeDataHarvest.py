@@ -9,7 +9,7 @@ import numpy as np
 from googleapiclient.errors import HttpError
 from pprint import pprint
 
-api_key ='AIzaSyDe6JawYkkE2rsogZllDxLSYJ5mIBDRRAg'
+api_key ='************************'
 youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey=api_key)
 
 # This function is to Scrape the channel details with respect to channel id
@@ -183,7 +183,7 @@ elif selected == 'Add to SQL':
             vdf['duration'] = [i[-1] for i in (vdf['duration'].str.split())]
             cmdf['published_date'] = pd.to_datetime(cmdf['published_date'], format='%Y-%m-%dT%H:%M:%SZ', utc=True)
             # Creating an Engine to connect to MySql Database using SQlAlchemy
-            engine = create_engine('mysql+mysqlconnector://root:7295*MAthew@localhost/youtubeData')
+            engine = create_engine('mysql+mysqlconnector://root:*******@localhost/youtubeData')
                         
             # Convert DataFrame to MySQL table
             cdf.to_sql('channel_details', con=engine, if_exists='append', index=False)
@@ -202,7 +202,7 @@ elif selected == 'Add to SQL':
 elif selected == "Frequently Asked Questions":
    st.title('SQL :blue[Queries] :white_check_mark')
    # Creating an Engine to connect to MySql Database using SQlAlchemy
-   engine = create_engine('mysql+mysqlconnector://root:7295*MAthew@localhost/youtubeData')
+   engine = create_engine('mysql+mysqlconnector://root:*********@localhost/youtubeData')
    if option == 'Question 1':
       st.markdown("## What are the names of all the videos and their corresponding channels?")
       with st.spinner('Fetching information...'):
